@@ -1,5 +1,5 @@
 //
-//  ChatListItemTableViewCell.swift
+//  ChatFromMeTableViewCell.swift
 //  TravelTalk
 //
 //  Created by Kyuhee hong on 1/10/25.
@@ -7,14 +7,8 @@
 
 import UIKit
 
-class ChatListItemTableViewCell: UITableViewCell {
-    
-    @IBOutlet var itemBackgroundView: UIView!
-    @IBOutlet var friendProfileImageView: UIImageView!
-    @IBOutlet var friendNameLabel: UILabel!
-    @IBOutlet var friendLatestChatLabel: UILabel!
-    @IBOutlet var friendLatestDateLabel: UILabel!
-    
+class ChatFromMeTableViewCell: UITableViewCell {
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

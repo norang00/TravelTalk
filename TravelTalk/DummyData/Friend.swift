@@ -1,11 +1,11 @@
 //
-//  User.swift
+//  Friend.swift
 //  TravelTalk
 //
 //  Created by Kyuhee hong on 1/10/25.
 //
 
-enum User: String {
+enum Friend: String {
     case hue = "Hue"
     case jack = "Jack"
     case bran = "Bran"

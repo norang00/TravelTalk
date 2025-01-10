@@ -1,5 +1,5 @@
 //
-//  ChatBubbleTableViewCell.swift
+//  ChatFromFriendTableViewCell.swift
 //  TravelTalk
 //
 //  Created by Kyuhee hong on 1/10/25.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ChatBubbleTableViewCell: UITableViewCell {
+class ChatFromFriendTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

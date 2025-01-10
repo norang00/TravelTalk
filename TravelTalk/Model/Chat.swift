@@ -8,7 +8,7 @@ import Foundation
 
 //채팅 화면에서 사용할 데이터 구조체
 struct Chat {
-    let user: User
+    let friend: Friend
     let date: String
     let message: String
 }

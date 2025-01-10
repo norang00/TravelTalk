@@ -8,15 +8,27 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Chat List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TravelTalk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatListViewController" id="BYZ-38-t0r" customClass="ChatListViewController" customModule="TravelTalk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mIM-hc-DbJ">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mIM-hc-DbJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="09s-6n-1Wn"/>
+                            <constraint firstItem="mIM-hc-DbJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Cmk-Hd-fgH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mIM-hc-DbJ" secondAttribute="trailing" id="h4W-sA-Bqd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mIM-hc-DbJ" secondAttribute="bottom" id="shq-KC-Fbo"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nZo-7Q-9cd"/>
                 </viewController>
@@ -42,20 +54,51 @@
             </objects>
             <point key="canvasLocation" x="-785.49618320610682" y="15.492957746478874"/>
         </scene>
-        <!--View Controller-->
+        <!--Chat Room View Controller-->
         <scene sceneID="Mi6-0f-RE8">
             <objects>
-                <viewController id="MLJ-qh-HcH" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatRoomViewController" id="MLJ-qh-HcH" customClass="ChatRoomViewController" customModule="TravelTalk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JFs-6S-ve5">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xP9-QM-WdO">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="2In-ZP-blb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2In-ZP-blb" firstAttribute="trailing" secondItem="xP9-QM-WdO" secondAttribute="trailing" id="2cH-eQ-r3c"/>
+                            <constraint firstItem="2In-ZP-blb" firstAttribute="bottom" secondItem="xP9-QM-WdO" secondAttribute="bottom" id="V7G-77-ntt"/>
+                            <constraint firstItem="xP9-QM-WdO" firstAttribute="leading" secondItem="2In-ZP-blb" secondAttribute="leading" id="bWA-QH-4nz"/>
+                            <constraint firstItem="xP9-QM-WdO" firstAttribute="top" secondItem="2In-ZP-blb" secondAttribute="top" id="wcU-ES-CEK"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="6He-qA-Nfw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFS-72-qab" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1077" y="15"/>
+            <point key="canvasLocation" x="2002.2900763358778" y="14.788732394366198"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="c4n-b4-tBX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="byI-D3-TTx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QwE-RC-tZl">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MLJ-qh-HcH" kind="relationship" relationship="rootViewController" id="1dd-f6-3pL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sSl-58-RqW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1075.5725190839694" y="14.788732394366198"/>
         </scene>
     </scenes>
     <resources>

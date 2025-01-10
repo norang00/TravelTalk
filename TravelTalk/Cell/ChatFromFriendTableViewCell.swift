@@ -8,6 +8,10 @@
 import UIKit
 
 class ChatFromFriendTableViewCell: UITableViewCell {
+    
+    static var identifier: String {
+        return String(describing: self)
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

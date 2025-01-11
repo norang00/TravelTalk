@@ -68,7 +68,7 @@ class GroupItemTableViewCell: UITableViewCell {
         let lastChat = chatRoom.chatList.last
         latestChatLabel.text = lastChat?.message
 
-        let lastDate = DateFormatter.convertFormat(lastChat?.date ?? "")
+        let lastDate = DateFormatter.convertToyyMMdd(lastChat?.date ?? "")
         latestDateLabel.text = lastDate
     }
 }

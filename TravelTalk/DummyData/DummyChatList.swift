@@ -4,8 +4,27 @@
 //
 //  Created by Kyuhee hong on 1/10/25.
 //
+import Foundation
 
 let dummyChatList: [ChatRoom] = [
+    ChatRoom(chatroomId: 0,
+             chatroomImage: ["talkbubble"],
+             chatroomName: "테스트",
+             chatList: [
+                Chat(friend: .simsim,
+                     date: "2025-01-12 21:30",
+                     message: "테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트"),
+                Chat(friend: .user,
+                     date: "2025-01-12 21:30",
+                     message: "테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트"),
+                Chat(friend: .simsim,
+                     date: "2025-01-12 21:30",
+                     message: "테"),
+                Chat(friend: .user,
+                     date: "2025-01-12 21:30",
+                     message: "테스트테트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트")
+             ]
+            ),
     ChatRoom(chatroomId: 1,
              chatroomImage: [Friend.hue.profileImage, Friend.jack.profileImage, Friend.bran.profileImage, Friend.den.profileImage],
              chatroomName: "도봉 멘토방",

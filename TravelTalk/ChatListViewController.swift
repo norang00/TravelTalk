@@ -22,17 +22,18 @@ class ChatListViewController: UIViewController {
 
     }
     
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let selectedCell = sender as! UITableViewCell
+        let identifier = selectedCell.reuseIdentifier
+//        
+//        if let destination = segue.destination as! ChatRoomViewController {
+//            destination.chat = 
+//            
+//        } else {
+//            
+//        }
     }
-    */
 
 }
 

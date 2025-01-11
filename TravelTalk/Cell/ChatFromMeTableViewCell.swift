@@ -12,16 +12,37 @@ class ChatFromMeTableViewCell: UITableViewCell {
     static var identifier: String {
         return String(describing: self)
     }
+    
+    @IBOutlet var talkBubbleView: UIView!
+    @IBOutlet var talkBubbleImageView: UIImageView!
+    @IBOutlet var chatLabel: UILabel!
+    @IBOutlet var dateLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
+        configure()
+        print(#function, "from friend")
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
+    func configure() {
+        talkBubbleImageView.image = UIImage.mytalkbubble
+        talkBubbleImageView.contentMode = .scaleToFill
+        
+        chatLabel.font = .systemFont(ofSize: 12, weight: .medium)
+        chatLabel.textColor = .black
+        chatLabel.textAlignment = .left
+        chatLabel.contentMode = .top
+        chatLabel.numberOfLines = 0
+
+        dateLabel.font = .systemFont(ofSize: 8, weight: .medium)
+        dateLabel.textColor = .darkGray
+        dateLabel.textAlignment = .right
+        dateLabel.numberOfLines = 1
+    }
+    
+    func configureData(_ chat: Chat) {
+        chatLabel.text = chat.message
+        dateLabel.text = DateFormatter.convertToHHmm(chat.date)
+    }
 }

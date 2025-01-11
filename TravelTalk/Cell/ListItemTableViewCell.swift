@@ -23,12 +23,6 @@ class ListItemTableViewCell: UITableViewCell {
         super.awakeFromNib()
         configure()
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
     func configure() {
         
@@ -58,7 +52,7 @@ class ListItemTableViewCell: UITableViewCell {
         let lastChat = chatRoom.chatList.last
         latestChatLabel.text = lastChat?.message
         
-        let lastDate = DateFormatter.convertFormat(lastChat?.date ?? "")
+        let lastDate = DateFormatter.convertToyyMMdd(lastChat?.date ?? "")
         latestDateLabel.text = lastDate
     }
     

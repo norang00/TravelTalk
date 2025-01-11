@@ -66,27 +66,89 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xP9-QM-WdO">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="650"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="650" id="tzW-Gf-D5z"/>
+                                </constraints>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4YD-n1-XZZ">
+                                <rect key="frame" x="0.0" y="736" width="393" height="82"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x50-dm-934">
+                                        <rect key="frame" x="16" y="16" width="361" height="50"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qld-Ih-q3Q">
+                                                <rect key="frame" x="16" y="8" width="254" height="34"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyN-K1-DxI">
+                                                <rect key="frame" x="278" y="8" width="75" height="35"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="qld-Ih-q3Q" firstAttribute="leading" secondItem="x50-dm-934" secondAttribute="leading" constant="16" id="2o0-a9-y5u"/>
+                                            <constraint firstItem="qld-Ih-q3Q" firstAttribute="top" secondItem="x50-dm-934" secondAttribute="top" constant="8" id="B5A-3j-h1y"/>
+                                            <constraint firstAttribute="height" constant="50" id="HDU-yr-2PC"/>
+                                            <constraint firstAttribute="bottom" secondItem="qld-Ih-q3Q" secondAttribute="bottom" constant="8" id="Jel-VE-QKi"/>
+                                            <constraint firstItem="lyN-K1-DxI" firstAttribute="top" secondItem="x50-dm-934" secondAttribute="top" constant="8" id="Ovf-3u-oyB"/>
+                                            <constraint firstAttribute="trailing" secondItem="lyN-K1-DxI" secondAttribute="trailing" constant="8" id="Zm4-Yc-BBh"/>
+                                            <constraint firstItem="lyN-K1-DxI" firstAttribute="leading" secondItem="qld-Ih-q3Q" secondAttribute="trailing" constant="8" id="jEW-hA-VI2"/>
+                                            <constraint firstItem="qld-Ih-q3Q" firstAttribute="centerY" secondItem="x50-dm-934" secondAttribute="centerY" id="p0K-kN-Yyd"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="x50-dm-934" firstAttribute="centerX" secondItem="4YD-n1-XZZ" secondAttribute="centerX" id="24N-NZ-OBW"/>
+                                    <constraint firstItem="x50-dm-934" firstAttribute="leading" secondItem="4YD-n1-XZZ" secondAttribute="leading" constant="16" id="5lD-Vk-6Iv"/>
+                                    <constraint firstItem="x50-dm-934" firstAttribute="centerY" secondItem="4YD-n1-XZZ" secondAttribute="centerY" id="D1V-kg-eCL"/>
+                                    <constraint firstAttribute="trailing" secondItem="x50-dm-934" secondAttribute="trailing" constant="16" id="JeO-Hh-7Xs"/>
+                                    <constraint firstItem="x50-dm-934" firstAttribute="top" secondItem="4YD-n1-XZZ" secondAttribute="top" constant="16" id="grD-jp-CW6"/>
+                                    <constraint firstAttribute="bottom" secondItem="x50-dm-934" secondAttribute="bottom" constant="16" id="gtS-SY-3fQ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2In-ZP-blb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="2In-ZP-blb" firstAttribute="trailing" secondItem="xP9-QM-WdO" secondAttribute="trailing" id="2cH-eQ-r3c"/>
-                            <constraint firstItem="2In-ZP-blb" firstAttribute="bottom" secondItem="xP9-QM-WdO" secondAttribute="bottom" id="V7G-77-ntt"/>
+                            <constraint firstItem="4YD-n1-XZZ" firstAttribute="trailing" secondItem="2In-ZP-blb" secondAttribute="trailing" id="axB-fi-L6g"/>
                             <constraint firstItem="xP9-QM-WdO" firstAttribute="leading" secondItem="2In-ZP-blb" secondAttribute="leading" id="bWA-QH-4nz"/>
+                            <constraint firstItem="4YD-n1-XZZ" firstAttribute="leading" secondItem="2In-ZP-blb" secondAttribute="leading" id="gs2-NK-qo0"/>
+                            <constraint firstItem="2In-ZP-blb" firstAttribute="bottom" secondItem="4YD-n1-XZZ" secondAttribute="bottom" id="ogm-Fy-Tby"/>
                             <constraint firstItem="xP9-QM-WdO" firstAttribute="top" secondItem="2In-ZP-blb" secondAttribute="top" id="wcU-ES-CEK"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="zDY-bZ-Hlb" appends="YES" id="IDu-ND-0W5"/>
+                            <outletCollection property="gestureRecognizers" destination="zDY-bZ-Hlb" appends="YES" id="U7T-WU-Uvt"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="6He-qA-Nfw"/>
                     <connections>
+                        <outlet property="chatInputView" destination="4YD-n1-XZZ" id="hy6-Nr-BOi"/>
+                        <outlet property="inputBackgroundView" destination="x50-dm-934" id="b9q-8l-dE6"/>
+                        <outlet property="sendButton" destination="lyN-K1-DxI" id="RxO-T7-mEG"/>
                         <outlet property="tableView" destination="xP9-QM-WdO" id="VJ3-8C-CdU"/>
+                        <outlet property="textView" destination="qld-Ih-q3Q" id="PKx-bb-b0X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFS-72-qab" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="zDY-bZ-Hlb">
+                    <connections>
+                        <action selector="tapGesture:" destination="MLJ-qh-HcH" id="mxg-n3-Kmb"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2166" y="15"/>
+            <point key="canvasLocation" x="2165.6488549618321" y="14.788732394366198"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QaQ-ja-FiF">
@@ -109,6 +171,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

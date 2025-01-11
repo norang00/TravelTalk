@@ -20,9 +20,8 @@ class ChatFromMeTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        configure()
-        print(#function, "from friend")
 
+        configure()
     }
     
     func configure() {

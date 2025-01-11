@@ -15,28 +15,38 @@ class ChatRoomViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     
+    @IBOutlet var chatInputView: UIView!
+    @IBOutlet var inputBackgroundView: UIView!
+    @IBOutlet var textView: UITextView!
+    @IBOutlet var sendButton: UIButton!
+
     var chatRoom: ChatRoom = dummyChatList[0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        print(#function)
         
         setNavigationAppearance(chatRoom.chatroomName)
         setTableView()
+        setTextView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        scrollToBottom()
+    }
+ 
+    func scrollToBottom() {
         tableView.scrollToRow(at: IndexPath(row: chatRoom.chatList.count-1, section: 0), at: .bottom, animated: false)
+    }
+    
+    @IBAction func tapGesture(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
     }
 }
 
 extension ChatRoomViewController: UITableViewDelegate, UITableViewDataSource {
     
     func setTableView() {
-        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -48,34 +58,28 @@ extension ChatRoomViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
         tableView.allowsSelection = false
-        print(#function)
-
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(#function)
         return chatRoom.chatList.count
-
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let chat = chatRoom.chatList[indexPath.row]
-        
+
         if chat.friend == .user {
             let cell = tableView.dequeueReusableCell(withIdentifier: ChatFromMeTableViewCell.identifier, for: indexPath) as! ChatFromMeTableViewCell
-            
+
             cell.configureData(chat)
             cell.tag = indexPath.row
-            print(#function, cell)
 
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: ChatFromFriendTableViewCell.identifier, for: indexPath) as! ChatFromFriendTableViewCell
 
             cell.configureData(chat)
-            print(#function, cell)
-
             cell.tag = indexPath.row
+
             return cell
         }
     }
@@ -83,5 +87,57 @@ extension ChatRoomViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
+    
+}
+
+extension ChatRoomViewController: UITextViewDelegate {
+    
+    func setTextView() {
+        textView.delegate = self
+
+        inputBackgroundView.layer.cornerRadius = 8
+        inputBackgroundView.layer.backgroundColor = UIColor.textViewBackground.cgColor
+        
+        textView.text = "메세지를 입력하세요"
+        textView.textColor = .gray
+        textView.textAlignment = .left
+        textView.textContainerInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        textView.borderStyle = .none
+        textView.backgroundColor = .clear
+        textView.isEditable = true
+        
+        sendButton.setTitle("", for: .normal)
+        sendButton.setImage(UIImage(systemName: "paperplane"), for: .normal)
+        sendButton.contentMode = .scaleAspectFit
+        sendButton.tintColor = .black
+        
+        textView.inputAccessoryView = chatInputView
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        print(#function)
+        if textView.text == "메세지를 입력하세요" {
+                textView.text = ""
+                textView.textColor = .black
+            }
+    }
+
+    func textViewDidEndEditing(_ textView: UITextView) {
+        print(#function)
+        if textView.text.isEmpty {
+                textView.text = "메세지를 입력하세요"
+                textView.textColor = .gray
+            }
+        
+        let newDate: String = DateFormatter.HHmmFormatter.string(from: Date())
+        let newChat: Chat = Chat(friend: .user, date: newDate, message: textView.text)
+        chatRoom.chatList.append(newChat)
+        print("newChat \(newChat)")
+        print(chatRoom.chatList)
+        
+        tableView.reloadData()
+        scrollToBottom()
+    }
+
     
 }

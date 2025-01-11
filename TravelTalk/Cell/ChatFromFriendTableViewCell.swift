@@ -24,11 +24,9 @@ class ChatFromFriendTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         configure()
-        print(#function, "from friend")
     }
     
     func configure() {
-        
         profileImageView.layer.cornerRadius = 25
         profileImageView.contentMode = .scaleAspectFit
 

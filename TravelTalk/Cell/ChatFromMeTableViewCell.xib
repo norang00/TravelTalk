@@ -18,13 +18,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7FY-CV-0ss">
-                        <rect key="frame" x="82.666666666666657" y="8" width="311.33333333333337" height="80"/>
+                        <rect key="frame" x="84.666666666666657" y="8" width="313.33333333333337" height="80"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mytalkbubble" translatesAutoresizingMaskIntoConstraints="NO" id="5kY-n8-jcG">
                                 <rect key="frame" x="0.0" y="0.0" width="313.33333333333331" height="80"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="LabelLabelLabelLabelLabelLabelLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pt5-6O-mEu">
-                                <rect key="frame" x="8" y="8" width="279.33333333333331" height="64"/>
+                                <rect key="frame" x="8" y="8" width="289.33333333333331" height="64"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -36,14 +36,14 @@
                             <constraint firstItem="pt5-6O-mEu" firstAttribute="top" secondItem="5kY-n8-jcG" secondAttribute="top" constant="8" id="KXD-la-ZCN"/>
                             <constraint firstItem="pt5-6O-mEu" firstAttribute="top" secondItem="7FY-CV-0ss" secondAttribute="top" constant="8" id="YMh-Wt-sHv"/>
                             <constraint firstItem="pt5-6O-mEu" firstAttribute="leading" secondItem="5kY-n8-jcG" secondAttribute="leading" constant="8" id="ZcM-13-FPf"/>
-                            <constraint firstAttribute="trailing" secondItem="pt5-6O-mEu" secondAttribute="trailing" constant="24" id="mOP-q9-uDq"/>
+                            <constraint firstAttribute="trailing" secondItem="pt5-6O-mEu" secondAttribute="trailing" constant="16" id="mOP-q9-uDq"/>
                             <constraint firstItem="pt5-6O-mEu" firstAttribute="leading" secondItem="7FY-CV-0ss" secondAttribute="leading" constant="8" id="slZ-N9-ybF"/>
-                            <constraint firstItem="pt5-6O-mEu" firstAttribute="trailing" secondItem="5kY-n8-jcG" secondAttribute="trailing" constant="-26" id="u0M-Px-QCD"/>
+                            <constraint firstItem="pt5-6O-mEu" firstAttribute="trailing" secondItem="5kY-n8-jcG" secondAttribute="trailing" constant="-16" id="u0M-Px-QCD"/>
                             <constraint firstAttribute="bottom" secondItem="pt5-6O-mEu" secondAttribute="bottom" constant="8" id="wWa-9K-DDe"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="88:88 오전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vn1-5I-Wtw">
-                        <rect key="frame" x="15.999999999999996" y="73.666666666666671" width="58.666666666666657" height="14.333333333333329"/>
+                        <rect key="frame" x="17.999999999999996" y="73.666666666666671" width="58.666666666666657" height="14.333333333333329"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -55,7 +55,7 @@
                     <constraint firstItem="7FY-CV-0ss" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="YOA-10-gxe"/>
                     <constraint firstAttribute="bottom" secondItem="Vn1-5I-Wtw" secondAttribute="bottom" constant="8" id="buH-8r-vMd"/>
                     <constraint firstItem="7FY-CV-0ss" firstAttribute="leading" secondItem="Vn1-5I-Wtw" secondAttribute="trailing" constant="8" id="mj3-9Q-fUY"/>
-                    <constraint firstAttribute="trailing" secondItem="7FY-CV-0ss" secondAttribute="trailing" constant="20" id="tiN-T3-t6b"/>
+                    <constraint firstAttribute="trailing" secondItem="7FY-CV-0ss" secondAttribute="trailing" constant="16" id="tiN-T3-t6b"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -69,7 +69,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="mytalkbubble" width="62" height="80"/>
+        <image name="mytalkbubble" width="11.333333015441895" height="21"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

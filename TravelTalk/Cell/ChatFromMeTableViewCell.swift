@@ -29,13 +29,13 @@ class ChatFromMeTableViewCell: UITableViewCell {
         talkBubbleImageView.image = UIImage.mytalkbubble
         talkBubbleImageView.contentMode = .scaleToFill
         
-        chatLabel.font = .systemFont(ofSize: 12, weight: .medium)
+        chatLabel.font = .systemFont(ofSize: 14, weight: .medium)
         chatLabel.textColor = .black
         chatLabel.textAlignment = .left
         chatLabel.contentMode = .top
         chatLabel.numberOfLines = 0
 
-        dateLabel.font = .systemFont(ofSize: 8, weight: .medium)
+        dateLabel.font = .systemFont(ofSize: 10, weight: .medium)
         dateLabel.textColor = .darkGray
         dateLabel.textAlignment = .right
         dateLabel.numberOfLines = 1

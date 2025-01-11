@@ -5,14 +5,14 @@
       "idiom" : "universal",
       "resizing" : {
         "cap-insets" : {
-          "bottom" : 21,
-          "left" : 20,
-          "right" : 41,
-          "top" : 50
+          "bottom" : 6,
+          "left" : 6,
+          "right" : 27,
+          "top" : 57
         },
         "center" : {
-          "height" : 9,
-          "mode" : "tile",
+          "height" : 1,
+          "mode" : "stretch",
           "width" : 1
         },
         "mode" : "9-part"
@@ -20,16 +20,49 @@
       "scale" : "1x"
     },
     {
+      "filename" : "mytalkbubble 1.png",
       "idiom" : "universal",
+      "resizing" : {
+        "cap-insets" : {
+          "bottom" : 6,
+          "left" : 6,
+          "right" : 27,
+          "top" : 59
+        },
+        "center" : {
+          "height" : 4,
+          "mode" : "stretch",
+          "width" : 1
+        },
+        "mode" : "9-part"
+      },
       "scale" : "2x"
     },
     {
+      "filename" : "mytalkbubble 2.png",
       "idiom" : "universal",
+      "resizing" : {
+        "cap-insets" : {
+          "bottom" : 6,
+          "left" : 6,
+          "right" : 27,
+          "top" : 56
+        },
+        "center" : {
+          "height" : 1,
+          "mode" : "stretch",
+          "width" : 1
+        },
+        "mode" : "9-part"
+      },
       "scale" : "3x"
     }
   ],
   "info" : {
     "author" : "xcode",
     "version" : 1
+  },
+  "properties" : {
+    "template-rendering-intent" : "original"
   }
 }

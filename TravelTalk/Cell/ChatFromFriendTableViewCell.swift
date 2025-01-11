@@ -32,17 +32,17 @@ class ChatFromFriendTableViewCell: UITableViewCell {
         profileImageView.layer.cornerRadius = 25
         profileImageView.contentMode = .scaleAspectFit
 
-        nameLabel.font = .systemFont(ofSize: 12, weight: .bold)
+        nameLabel.font = .systemFont(ofSize: 14, weight: .bold)
         nameLabel.textColor = .black
         nameLabel.textAlignment = .left
         
-        chatLabel.font = .systemFont(ofSize: 12, weight: .medium)
+        chatLabel.font = .systemFont(ofSize: 14, weight: .medium)
         chatLabel.textColor = .black
         chatLabel.textAlignment = .left
         chatLabel.contentMode = .top
         chatLabel.numberOfLines = 0
 
-        dateLabel.font = .systemFont(ofSize: 8, weight: .medium)
+        dateLabel.font = .systemFont(ofSize: 10, weight: .medium)
         dateLabel.textColor = .darkGray
         dateLabel.textAlignment = .right
         dateLabel.numberOfLines = 1

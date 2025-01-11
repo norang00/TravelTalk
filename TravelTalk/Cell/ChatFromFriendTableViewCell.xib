@@ -18,14 +18,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ATG-96-ccL">
-                        <rect key="frame" x="20" y="8" width="60" height="60"/>
+                        <rect key="frame" x="16" y="8" width="60" height="60"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="ATG-96-ccL" secondAttribute="height" multiplier="1:1" id="47g-0a-uXo"/>
                             <constraint firstAttribute="width" constant="60" id="EdR-Ja-LbD"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hq-ic-tvS">
-                        <rect key="frame" x="88" y="8" width="225" height="20"/>
+                        <rect key="frame" x="84" y="8" width="229" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="brf-Wg-3y2"/>
                         </constraints>
@@ -34,19 +34,19 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="88:88 오전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Q8-sX-NTw">
-                        <rect key="frame" x="251.99999999999997" y="53.666666666666664" width="58.666666666666657" height="14.333333333333336"/>
+                        <rect key="frame" x="231.99999999999997" y="53.666666666666664" width="58.666666666666657" height="14.333333333333336"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Bc-pK-KOy">
-                        <rect key="frame" x="88" y="36" width="156" height="32"/>
+                        <rect key="frame" x="76" y="36" width="148" height="32"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="talkbubble" translatesAutoresizingMaskIntoConstraints="NO" id="B7C-br-5O5">
-                                <rect key="frame" x="-2" y="0.0" width="158" height="32"/>
+                                <rect key="frame" x="0.0" y="0.0" width="148" height="32"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="LabelLabelLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOE-qZ-UMD">
-                                <rect key="frame" x="24" y="8" width="124" height="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="LabelLabelLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOE-qZ-UMD">
+                                <rect key="frame" x="16" y="8" width="124" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -55,11 +55,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="B7C-br-5O5" firstAttribute="top" secondItem="wOE-qZ-UMD" secondAttribute="top" constant="-8" id="JFM-9W-OIz"/>
-                            <constraint firstItem="wOE-qZ-UMD" firstAttribute="leading" secondItem="7Bc-pK-KOy" secondAttribute="leading" constant="24" id="PqA-7I-AgB"/>
+                            <constraint firstItem="wOE-qZ-UMD" firstAttribute="leading" secondItem="7Bc-pK-KOy" secondAttribute="leading" constant="16" id="PqA-7I-AgB"/>
                             <constraint firstItem="B7C-br-5O5" firstAttribute="bottom" secondItem="wOE-qZ-UMD" secondAttribute="bottom" constant="8" id="QYX-pP-buN"/>
                             <constraint firstItem="B7C-br-5O5" firstAttribute="trailing" secondItem="wOE-qZ-UMD" secondAttribute="trailing" constant="8" id="Y02-uv-V3j"/>
                             <constraint firstItem="wOE-qZ-UMD" firstAttribute="top" secondItem="7Bc-pK-KOy" secondAttribute="top" constant="8" id="Z2J-QO-X5j"/>
-                            <constraint firstItem="B7C-br-5O5" firstAttribute="leading" secondItem="wOE-qZ-UMD" secondAttribute="leading" constant="-26" id="f40-EA-9Bd"/>
+                            <constraint firstItem="B7C-br-5O5" firstAttribute="leading" secondItem="wOE-qZ-UMD" secondAttribute="leading" constant="-16" id="f40-EA-9Bd"/>
                             <constraint firstAttribute="trailing" secondItem="wOE-qZ-UMD" secondAttribute="trailing" constant="8" id="jTH-1O-fBM"/>
                             <constraint firstAttribute="bottom" secondItem="wOE-qZ-UMD" secondAttribute="bottom" constant="8" id="ryI-Xt-yuK"/>
                         </constraints>
@@ -69,11 +69,11 @@
                     <constraint firstAttribute="bottom" secondItem="7Bc-pK-KOy" secondAttribute="bottom" constant="8" id="0eS-y8-0oW"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5Q8-sX-NTw" secondAttribute="trailing" constant="16" id="I1B-RS-Dk4"/>
                     <constraint firstAttribute="bottom" secondItem="5Q8-sX-NTw" secondAttribute="bottom" constant="8" id="I6G-5m-q4k"/>
-                    <constraint firstItem="7Bc-pK-KOy" firstAttribute="leading" secondItem="ATG-96-ccL" secondAttribute="trailing" constant="8" id="Zvj-lg-Whh"/>
+                    <constraint firstItem="7Bc-pK-KOy" firstAttribute="leading" secondItem="ATG-96-ccL" secondAttribute="trailing" id="Zvj-lg-Whh"/>
                     <constraint firstAttribute="trailing" secondItem="3hq-ic-tvS" secondAttribute="trailing" constant="40" id="eo9-B7-Yo5"/>
                     <constraint firstItem="5Q8-sX-NTw" firstAttribute="leading" secondItem="7Bc-pK-KOy" secondAttribute="trailing" constant="8" id="hqp-mL-4T0"/>
                     <constraint firstItem="3hq-ic-tvS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="oTM-jL-BUn"/>
-                    <constraint firstItem="ATG-96-ccL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="p5Q-qY-pVs"/>
+                    <constraint firstItem="ATG-96-ccL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="p5Q-qY-pVs"/>
                     <constraint firstItem="ATG-96-ccL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="teL-IE-8AC"/>
                     <constraint firstItem="7Bc-pK-KOy" firstAttribute="top" secondItem="3hq-ic-tvS" secondAttribute="bottom" constant="8" id="uG9-mn-Xbk"/>
                     <constraint firstItem="3hq-ic-tvS" firstAttribute="leading" secondItem="ATG-96-ccL" secondAttribute="trailing" constant="8" id="yKQ-JA-BA9"/>
@@ -92,7 +92,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="talkbubble" width="62" height="101"/>
+        <image name="talkbubble" width="11.333333015441895" height="23.333333969116211"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

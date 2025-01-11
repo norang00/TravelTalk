@@ -44,6 +44,7 @@ extension ChatListViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.register(groupItemXib, forCellReuseIdentifier: GroupItemTableViewCell.identifier)
         
         tableView.separatorStyle = .none
+        tableView.showsVerticalScrollIndicator = false
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

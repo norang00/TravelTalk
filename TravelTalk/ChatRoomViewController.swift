@@ -25,6 +25,12 @@ class ChatRoomViewController: UIViewController {
         setNavigationAppearance(chatRoom.chatroomName)
         setTableView()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.scrollToRow(at: IndexPath(row: chatRoom.chatList.count-1, section: 0), at: .bottom, animated: false)
+    }
 }
 
 extension ChatRoomViewController: UITableViewDelegate, UITableViewDataSource {
@@ -38,8 +44,9 @@ extension ChatRoomViewController: UITableViewDelegate, UITableViewDataSource {
         let chatFromFriendXib = UINib(nibName: ChatFromFriendTableViewCell.identifier, bundle: nil)
         tableView.register(chatFromMeXib, forCellReuseIdentifier: ChatFromMeTableViewCell.identifier)
         tableView.register(chatFromFriendXib, forCellReuseIdentifier: ChatFromFriendTableViewCell.identifier)
-        
+
         tableView.separatorStyle = .none
+        tableView.showsVerticalScrollIndicator = false
         tableView.allowsSelection = false
         print(#function)
 

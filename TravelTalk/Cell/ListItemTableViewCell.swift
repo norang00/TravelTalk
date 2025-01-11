@@ -26,8 +26,9 @@ class ListItemTableViewCell: UITableViewCell {
     
     func configure() {
         
-        profileImageView.layer.cornerRadius = 25
         profileImageView.contentMode = .scaleAspectFit
+        profileImageView.layer.cornerRadius = 25
+        profileImageView.layer.backgroundColor = UIColor.white.cgColor
 
         nameLabel.font = .systemFont(ofSize: 14, weight: .bold)
         nameLabel.textColor = .black

@@ -106,6 +106,7 @@
                 <outlet property="latestChatLabel" destination="umq-ry-srq" id="gYi-mq-KM1"/>
                 <outlet property="latestDateLabel" destination="dPk-jU-8vm" id="Er6-3d-NX1"/>
                 <outlet property="nameLabel" destination="RBr-N9-WvB" id="jAU-dM-bAC"/>
+                <outlet property="profileContainerView" destination="jSG-X8-QiB" id="AL4-oL-y1m"/>
                 <outletCollection property="profileImageViews" destination="rZa-z1-fyW" collectionClass="NSMutableArray" id="la0-nJ-35f"/>
                 <outletCollection property="profileImageViews" destination="D8O-vr-Dce" collectionClass="NSMutableArray" id="69g-Qj-OjD"/>
                 <outletCollection property="profileImageViews" destination="R6f-KV-JRk" collectionClass="NSMutableArray" id="HPl-wt-QlE"/>

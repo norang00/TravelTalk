@@ -9,6 +9,7 @@ import UIKit
 
 class GroupItemTableViewCell: UITableViewCell {
     
+    @IBOutlet var profileContainerView: UIView!
     @IBOutlet var profileImageViews: [UIImageView]!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var latestChatLabel: UILabel!
@@ -30,10 +31,14 @@ class GroupItemTableViewCell: UITableViewCell {
     }
     
     func configure() {
+    
+        profileContainerView.layer.cornerRadius = 4
+        profileContainerView.layer.backgroundColor = UIColor.white.cgColor
         
         for item in profileImageViews {
             item.contentMode = .scaleAspectFit
             item.layer.cornerRadius = 23/2
+            item.layer.backgroundColor = UIColor.white.cgColor
         }
         
         nameLabel.font = .systemFont(ofSize: 14, weight: .bold)

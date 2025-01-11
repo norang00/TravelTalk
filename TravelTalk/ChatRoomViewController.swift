@@ -22,11 +22,9 @@ class ChatRoomViewController: UIViewController {
         // Do any additional setup after loading the view.
         print(#function)
         
-        navigationItem.title = chatRoom.chatroomName
-        
+        setNavigationAppearance(chatRoom.chatroomName)
         setTableView()
     }
-    
 }
 
 extension ChatRoomViewController: UITableViewDelegate, UITableViewDataSource {
@@ -42,6 +40,7 @@ extension ChatRoomViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.register(chatFromFriendXib, forCellReuseIdentifier: ChatFromFriendTableViewCell.identifier)
         
         tableView.separatorStyle = .none
+        tableView.allowsSelection = false
         print(#function)
 
     }

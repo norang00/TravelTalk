@@ -8,7 +8,11 @@
 import UIKit
 
 class ChatRoomViewController: UIViewController {
-
+    
+    static var identifier: String {
+        return String(describing: self)
+    }
+    
     @IBOutlet var tableView: UITableView!
     
     var chatRoom: ChatRoom = dummyChatList[0]
@@ -55,6 +59,7 @@ extension ChatRoomViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: ChatFromMeTableViewCell.identifier, for: indexPath) as! ChatFromMeTableViewCell
             
             cell.configureData(chat)
+            cell.tag = indexPath.row
             print(#function, cell)
 
             return cell
@@ -64,6 +69,7 @@ extension ChatRoomViewController: UITableViewDelegate, UITableViewDataSource {
             cell.configureData(chat)
             print(#function, cell)
 
+            cell.tag = indexPath.row
             return cell
         }
     }

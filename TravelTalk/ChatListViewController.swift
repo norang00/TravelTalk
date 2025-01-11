@@ -8,10 +8,14 @@
 import UIKit
 
 class ChatListViewController: UIViewController {
+
+    static var identifier: String {
+        return String(describing: self)
+    }
+    
+    @IBOutlet var tableView: UITableView!
     
     let chatList: [ChatRoom] = dummyChatList
-
-    @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,19 +24,6 @@ class ChatListViewController: UIViewController {
         
         setTableView()
 
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        let selectedCell = sender as! UITableViewCell
-        let identifier = selectedCell.reuseIdentifier
-//        
-//        if let destination = segue.destination as! ChatRoomViewController {
-//            destination.chat = 
-//            
-//        } else {
-//            
-//        }
     }
 
 }
@@ -58,16 +49,18 @@ extension ChatListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let rowData = chatList[indexPath.row]
+        let chatRoom = chatList[indexPath.row]
         
-        if rowData.chatroomImage.count == 1 {
+        if chatRoom.chatroomImage.count == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: ListItemTableViewCell.identifier, for: indexPath) as! ListItemTableViewCell
-            cell.configureData(rowData)
+            cell.configureData(chatRoom)
+            cell.tag = chatRoom.chatroomId
             return cell
             
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: GroupItemTableViewCell.identifier, for: indexPath) as! GroupItemTableViewCell
-            cell.configureData(rowData)
+            cell.configureData(chatRoom)
+            cell.tag = chatRoom.chatroomId
             return cell
         }
         
@@ -75,6 +68,15 @@ extension ChatListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = chatList[indexPath.row]
+        if let vc = storyboard?.instantiateViewController(withIdentifier: ChatRoomViewController.identifier) as? ChatRoomViewController {
+            vc.chatRoom = item
+            
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
 }

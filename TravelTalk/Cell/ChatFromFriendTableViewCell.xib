@@ -10,11 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatFromFriendTableViewCell" rowHeight="110" id="KGk-i7-Jjw" customClass="ChatFromFriendTableViewCell" customModule="TravelTalk" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="353" height="110"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatFromFriendTableViewCell" rowHeight="76" id="KGk-i7-Jjw" customClass="ChatFromFriendTableViewCell" customModule="TravelTalk" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="353" height="76"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="353" height="110"/>
+                <rect key="frame" x="0.0" y="0.0" width="353" height="76"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ATG-96-ccL">
@@ -34,19 +34,19 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="88:88 오전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Q8-sX-NTw">
-                        <rect key="frame" x="252" y="87.666666666666671" width="85" height="14.333333333333329"/>
+                        <rect key="frame" x="251.99999999999997" y="53.666666666666664" width="58.666666666666657" height="14.333333333333336"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Bc-pK-KOy">
-                        <rect key="frame" x="88" y="36" width="156" height="66"/>
+                        <rect key="frame" x="88" y="36" width="156" height="32"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="talkbubble" translatesAutoresizingMaskIntoConstraints="NO" id="B7C-br-5O5">
-                                <rect key="frame" x="-2" y="0.0" width="158" height="66"/>
+                                <rect key="frame" x="-2" y="0.0" width="158" height="32"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="LabelLabelLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOE-qZ-UMD">
-                                <rect key="frame" x="24" y="8" width="124" height="50"/>
+                                <rect key="frame" x="24" y="8" width="124" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -67,7 +67,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="7Bc-pK-KOy" secondAttribute="bottom" constant="8" id="0eS-y8-0oW"/>
-                    <constraint firstAttribute="trailing" secondItem="5Q8-sX-NTw" secondAttribute="trailing" constant="16" id="I1B-RS-Dk4"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5Q8-sX-NTw" secondAttribute="trailing" constant="16" id="I1B-RS-Dk4"/>
                     <constraint firstAttribute="bottom" secondItem="5Q8-sX-NTw" secondAttribute="bottom" constant="8" id="I6G-5m-q4k"/>
                     <constraint firstItem="7Bc-pK-KOy" firstAttribute="leading" secondItem="ATG-96-ccL" secondAttribute="trailing" constant="8" id="Zvj-lg-Whh"/>
                     <constraint firstAttribute="trailing" secondItem="3hq-ic-tvS" secondAttribute="trailing" constant="40" id="eo9-B7-Yo5"/>
@@ -88,11 +88,11 @@
                 <outlet property="talkBubbleImageView" destination="B7C-br-5O5" id="Vvk-SW-C2a"/>
                 <outlet property="talkBubbleView" destination="7Bc-pK-KOy" id="odK-Bg-tyt"/>
             </connections>
-            <point key="canvasLocation" x="133.58778625954199" y="41.549295774647888"/>
+            <point key="canvasLocation" x="133.58778625954199" y="29.577464788732396"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="talkbubble" width="62" height="67"/>
+        <image name="talkbubble" width="62" height="101"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

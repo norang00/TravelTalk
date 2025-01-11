@@ -8,11 +8,11 @@
           "bottom" : 21,
           "left" : 41,
           "right" : 20,
-          "top" : 45
+          "top" : 79
         },
         "center" : {
           "height" : 1,
-          "mode" : "tile",
+          "mode" : "stretch",
           "width" : 1
         },
         "mode" : "9-part"

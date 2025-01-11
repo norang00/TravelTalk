@@ -30,7 +30,7 @@ class ChatFromFriendTableViewCell: UITableViewCell {
     func configure() {
         
         profileImageView.layer.cornerRadius = 25
-        profileImageView.contentMode = .scaleToFill
+        profileImageView.contentMode = .scaleAspectFit
 
         nameLabel.font = .systemFont(ofSize: 12, weight: .bold)
         nameLabel.textColor = .black

@@ -82,7 +82,7 @@
                                                 <rect key="frame" x="8" y="8" width="307" height="30"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="KM4-wl-A7P"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="KM4-wl-A7P"/>
                                                 </constraints>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <color key="textColor" systemColor="labelColor"/>
@@ -97,6 +97,9 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <connections>
+                                                    <action selector="sendButtonTapped:" destination="MLJ-qh-HcH" eventType="touchUpInside" id="aDM-Xl-xEJ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -134,7 +137,6 @@
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="zDY-bZ-Hlb" appends="YES" id="IDu-ND-0W5"/>
-                            <outletCollection property="gestureRecognizers" destination="zDY-bZ-Hlb" appends="YES" id="U7T-WU-Uvt"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="6He-qA-Nfw"/>
@@ -150,7 +152,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFS-72-qab" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="zDY-bZ-Hlb">
                     <connections>
-                        <action selector="tapGesture:" destination="MLJ-qh-HcH" id="mxg-n3-Kmb"/>
+                        <action selector="tapGesture:" destination="MLJ-qh-HcH" id="bP3-Ux-GiD"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

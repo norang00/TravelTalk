@@ -13,6 +13,7 @@ enum Friend: String {
     case user //본인
     case other_friend = "내옆자리의앞자리에개발잘하는친구"
     case simsim = "심심이"
+    case test = "test"
     
     var profileImage: String {
         return rawValue

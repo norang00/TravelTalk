@@ -19,8 +19,7 @@ class ChatRoomViewController: UIViewController {
     @IBOutlet var inputBackgroundView: UIView!
     @IBOutlet var textView: UITextView!
     @IBOutlet var sendButton: UIButton!
-
-    @IBOutlet var textViewHeightConstraint: NSLayoutConstraint!
+//    @IBOutlet var textViewHeightConstraint: NSLayoutConstraint!
     
     var chatRoom: ChatRoom = dummyChatList[0]
     
@@ -109,11 +108,12 @@ extension ChatRoomViewController: UITextViewDelegate {
         
         textView.isEditable = true
         
+        textView.inputAccessoryView = chatInputView
         
         sendButton.setTitle("", for: .normal)
         sendButton.setImage(UIImage(systemName: "paperplane"), for: .normal)
         sendButton.contentMode = .scaleAspectFit
-        sendButton.tintColor = .black        
+        sendButton.tintColor = .black
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
@@ -128,7 +128,11 @@ extension ChatRoomViewController: UITextViewDelegate {
         print(#function)
         print("\(textView.text)")
         
-        textViewHeightConstraint.constant = textView.contentSize.height
+//        textView.sizeThatFits(textView.intrinsicContentSize)
+//        textViewHeightConstraint.constant = textView.contentSize.height
+        // 텍스트뷰 세줄까지 늘려보기 절대 안됨 아무리해도 안바뀜... 왜지?
+        // 1. intrinsicContentSize 추가해도 안됨
+        // 2. Constraint 를 outlet 으로 빼도 안됨
     }
 
     func textViewDidEndEditing(_ textView: UITextView) {
@@ -141,6 +145,8 @@ extension ChatRoomViewController: UITextViewDelegate {
         let newDate: String = DateFormatter.yyyyMMddHHmmFormatter.string(from: Date())
         let newChat: Chat = Chat(friend: .user, date: newDate, message: textView.text)
         chatRoom.chatList.append(newChat)
+        textView.text = ""
+        
         print("newChat \(newChat)")
         print(chatRoom.chatList)
         

@@ -10,7 +10,7 @@
 import Foundation
 
 extension DateFormatter {
-    static let inputFormatter: DateFormatter = {
+    static let yyyyMMddHHmmFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "ko_KR")
         formatter.dateFormat = "yyyy-MM-dd HH:mm"
@@ -33,7 +33,7 @@ extension DateFormatter {
     
     static func convertToyyMMdd(_ input: String) -> String {
         var result: String = ""
-        if let date = DateFormatter.inputFormatter.date(from: input) {
+        if let date = DateFormatter.yyyyMMddHHmmFormatter.date(from: input) {
             result = DateFormatter.yyMMddFormatter.string(from: date)
         }
         return result
@@ -41,7 +41,7 @@ extension DateFormatter {
     
     static func convertToHHmm(_ input: String) -> String {
         var result: String = ""
-        if let date = DateFormatter.inputFormatter.date(from: input) {
+        if let date = DateFormatter.yyyyMMddHHmmFormatter.date(from: input) {
             result = DateFormatter.HHmmFormatter.string(from: date)
         }
         return result

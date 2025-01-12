@@ -20,6 +20,8 @@ class ChatRoomViewController: UIViewController {
     @IBOutlet var textView: UITextView!
     @IBOutlet var sendButton: UIButton!
 
+    @IBOutlet var textViewHeightConstraint: NSLayoutConstraint!
+    
     var chatRoom: ChatRoom = dummyChatList[0]
     
     override func viewDidLoad() {
@@ -104,14 +106,14 @@ extension ChatRoomViewController: UITextViewDelegate {
         textView.textContainerInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         textView.borderStyle = .none
         textView.backgroundColor = .clear
+        
         textView.isEditable = true
+        
         
         sendButton.setTitle("", for: .normal)
         sendButton.setImage(UIImage(systemName: "paperplane"), for: .normal)
         sendButton.contentMode = .scaleAspectFit
-        sendButton.tintColor = .black
-        
-        textView.inputAccessoryView = chatInputView
+        sendButton.tintColor = .black        
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
@@ -121,6 +123,13 @@ extension ChatRoomViewController: UITextViewDelegate {
                 textView.textColor = .black
             }
     }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        print(#function)
+        print("\(textView.text)")
+        
+        textViewHeightConstraint.constant = textView.contentSize.height
+    }
 
     func textViewDidEndEditing(_ textView: UITextView) {
         print(#function)
@@ -129,7 +138,7 @@ extension ChatRoomViewController: UITextViewDelegate {
                 textView.textColor = .gray
             }
         
-        let newDate: String = DateFormatter.HHmmFormatter.string(from: Date())
+        let newDate: String = DateFormatter.yyyyMMddHHmmFormatter.string(from: Date())
         let newChat: Chat = Chat(friend: .user, date: newDate, message: textView.text)
         chatRoom.chatList.append(newChat)
         print("newChat \(newChat)")
